@@ -38,12 +38,12 @@ const updateContent = () => {
 };
 
 const prevSlide = () => {
-  currentIndex == 0 ? alert('last slide') : currentIndex = (currentIndex - 1) % items.length;
+  currentIndex == 0 ? currentIndex = items.length - 1 : currentIndex = (currentIndex - 1) % items.length;
   updateContent();
 };
 
 const nextSlide = () => {
-    currentIndex == items.length - 1 ? alert('last slide') : currentIndex = (currentIndex + 1) % items.length;
+    currentIndex == items.length - 1 ? currentIndex = 0 : currentIndex = (currentIndex + 1) % items.length;
   updateContent();
 };
 
