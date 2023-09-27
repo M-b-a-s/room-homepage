@@ -10,24 +10,27 @@
 
 body {
   font-family: "League Spartan", sans-serif;
-  /* background-color: darkcyan; */
 }
 
 .container {
   display: grid;
   grid-template-areas:
-    "a a a a b b"
-    "c c c c c c";
+    "a a a a"
+    "c c c c";
   grid-template-rows: 65% 35%;
   height: 100vh;
 }
 
+.top {
+  grid-area: a;
+  display: grid;
+  grid-template-columns: 1fr 500px;
+}
+
 .top-left {
-  background-image: url('images/desktop-image-hero-1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  grid-area: a;
   padding: 70px;
 }
 
@@ -58,10 +61,9 @@ body {
 .top-right {
   position: relative;
   background-color: hsl(0, 0%, 100%);
-  grid-area: b;
   display: flex;
   align-items: center;
-  padding: 60px;
+  padding: 80px;
 }
 
 .top-right p {
@@ -162,5 +164,17 @@ body {
       "a a"
       "b b"
       "c c";
+    height: auto;
   }
+
+  .top-left {
+    background-image: url('images/mobile-image-hero-1.jpg');
+  }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
 }
